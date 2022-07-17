@@ -8,7 +8,13 @@ import (
 )
 
 func main() {
-	log.Println("hello world", os.Getenv("FOO"), env.Boolean(false, "HELLO_WORLD", "HELLO_WORLD_2"))
+	log.Println(
+		"hello world",
+		os.Getenv("FOO"),
+		env.Boolean(false),
+		env.Boolean2(false),
+		env.Ellipsis(false, false, false),
+	)
 }
 
 // ERROR
